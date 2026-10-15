@@ -1,16 +1,67 @@
-# React + Vite
+# ⚡ PulseCount — Modular Interactive Counter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and resilient counter application built with React and Tailwind CSS. Designed with clean component composition, lifting state up, controlled inputs, and type-safe updates.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[https://YOUR_NETLIFY_OR_VERCEL_LINK](https://YOUR_NETLIFY_OR_VERCEL_LINK)
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔄 **Modular Component Architecture**: Decoupled container and presentational components (`Counter`, `CounterDisplay`, `StepController`, `CounterControls`).
+- 🎯 **Lifting State Up Pattern**: Single source of truth managed at the parent container with event contracts.
+- 🛡️ **Type-Safe Calculations**: Resilient state updates preventing string concatenation bugs and NaN values.
+- ⚡ **Dynamic Step Controller**: Custom step adjustment with min/max range controls.
+- 🟢 **Derived State Status Badge**: Real-time polarity feedback (Positive, Negative, Zero) without redundant state variables.
+- 📱 **Fully Responsive Layout**: Mobile-first design optimized across handheld devices, tablets, and desktops.
+- 🎨 **Glassmorphism Dark Theme**: Modern UI aesthetics using Tailwind CSS backdrop blurs and subtle borders.
 
-## Expanding the ESLint configuration
+## 🛠️ Work in Progress & Future Additions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I am continuously improving this project as part of my React core concepts learning journey:
+
+- ⏳ **Custom Hook (`useCounter`)**: Extracting count and step state logic into a reusable hook.
+- 💾 **LocalStorage Persistence**: Auto-saving counter values across browser refreshes using `useEffect`.
+- ⌨️ **Keyboard Shortcuts**: Arrow key support for increment, decrement, and reset actions.
+- 📊 **Step History**: Visual timeline of recent count changes.
+
+## 🛠️ Tech Stack
+
+- **React.js (Vite)**
+- **Tailwind CSS**
+- **JavaScript (ES6+)**
+
+## 🧠 Concepts Used
+
+- **React State (`useState`)**
+- **Lifting State Up & Unidirectional Data Flow**
+- **Controlled Components & Input Binding**
+- **Derived State (Zero-overhead UI updates)**
+- **Event Callbacks vs Direct Setters**
+- **Type Coercion Safeguards (`Number()` parsing)**
+- **Functional State Updates (`(prev) => prev + step`)**
+- **Responsive Flexbox & Grid Systems**
+
+## 📁 Project Structure
+
+```text
+react-counter/
+│
+├── public/
+│
+├── src/
+│   ├── components/
+│   │   ├── Counter.jsx
+│   │   ├── CounterDisplay.jsx
+│   │   ├── CounterControls.jsx
+│   │   └── StepController.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+├── package.json
+├── package-lock.json
+├── .gitignore
+└── README.md
