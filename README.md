@@ -4,7 +4,7 @@ A modern, responsive, and resilient counter application built with React and Tai
 
 ## 🚀 Live Demo
 
-[https://YOUR_NETLIFY_OR_VERCEL_LINK](https://YOUR_NETLIFY_OR_VERCEL_LINK)
+[https://pulsecount-anku.netlify.app/](https://pulsecount-anku.netlify.app/)
 
 ## ✨ Features
 
@@ -65,3 +65,4 @@ react-counter/
 ├── package-lock.json
 ├── .gitignore
 └── README.md
+```
